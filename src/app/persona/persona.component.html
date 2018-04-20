@@ -1,0 +1,17 @@
+<div style="text-align:center">
+    PERSONA COMPONENT
+    <form *ngIf="persona">
+        <label for="nombre">NOMBRE</label>
+        <input type="text" id="nombre" [(ngModel)]="persona.nombre" name="nombre">
+        <label for="altura">ALTURA</label>
+        <input type="number" id="altura" [(ngModel)]="persona.altura" name="altura">
+        <label for="peso">PESO</label>
+        <input type="number" id="peso" [(ngModel)]="persona.peso" name="peso">
+        <button (click)="mostrarPersona(persona)">Mostrar Persona</button>
+    </form>
+    <imc-persona [peso]="persona.peso" [altura]="persona.altura"></imc-persona>
+</div>
+
+<div style="text-align: center" [hidden]="!persona">
+    {{persona | json}}
+</div>

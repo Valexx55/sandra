@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Persona } from './persona/persona.model';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
 }

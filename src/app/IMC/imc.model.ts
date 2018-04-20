@@ -1,0 +1,1 @@
+export enum TipoIMC {desnutrido, delgado, normal, sobrepeso, obeso}
