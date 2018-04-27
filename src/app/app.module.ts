@@ -2,6 +2,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'
 
 // componentes
 import { AppComponent } from './app.component';
@@ -11,17 +12,18 @@ import { ImcPipe } from './IMC/imc.pipe';
 
 
 @NgModule({
-  declarations: [
+  declarations: [ //Componentes, Directivas, Pipes
     AppComponent,
     PersonaComponent,
     IMCComponent,
     ImcPipe
   ],
-  imports: [
+  imports: [//Módulos
     BrowserModule,
-    FormsModule 
+    FormsModule,
+    HttpClientModule 
   ],
-  providers: [],
+  providers: [],//Servicios
   bootstrap: [AppComponent]
 })
 export class AppModule { }
