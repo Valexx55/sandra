@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { PersonaComponent } from './persona/persona.component';
 import { IMCComponent } from './IMC/imc.component';
 import { ImcPipe } from './IMC/imc.pipe';
+import { ListaPersonasComponent } from './lista-personas/lista-personas.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { ImcPipe } from './IMC/imc.pipe';
     AppComponent,
     PersonaComponent,
     IMCComponent,
-    ImcPipe
+    ImcPipe,
+    ListaPersonasComponent
   ],
   imports: [//Módulos
     BrowserModule,

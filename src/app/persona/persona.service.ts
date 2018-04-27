@@ -9,7 +9,7 @@ import { of } from 'rxjs/observable/of';
 export class PersonaService {
 
     static readonly URL_GET: string = "http://192.168.3.10:9080/angular/GetPersona";
-
+    static readonly URL_GET_LIST: string = "http://192.168.3.10:9080/angular/GetListaPersonas"
     constructor (private http:HttpClient)
     {
 
@@ -52,6 +52,15 @@ export class PersonaService {
             persona = new Persona("Juan", 1.5, 60);
 
         return persona;
+    }
+
+    getListaPersonas():Observable<Persona[]>
+    {
+        let listapersonas:Observable<Persona[]>
+
+            listapersonas = this.http.get<Persona[]>(PersonaService.URL_GET_LIST);
+
+        return listapersonas;
     }
 
 }

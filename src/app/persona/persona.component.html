@@ -1,6 +1,6 @@
-<div style="text-align:center">
+<div style="text-align:center"  *ngIf="persona">
     PERSONA COMPONENT
-    <form *ngIf="persona">
+    <form>
         <label for="nombre">NOMBRE</label>
         <input type="text" id="nombre" [(ngModel)]="persona.nombre" name="nombre">
         <label for="altura">ALTURA</label>
@@ -15,3 +15,4 @@
 <div style="text-align: center" [hidden]="persona">
     <img src="assets/giphy.gif">
 </div>
+<lista-personas></lista-personas>
